@@ -144,7 +144,7 @@ async def pack_kangish(_):
     if len(_.text) > 9:
         _packname = _.text.split(" ", maxsplit=1)[1]
     else:
-        _packname = f"Ultroid Kang Pack By {_.sender_id}"
+        _packname = f"INFINATO Sticker Collection"
     _id = _e.media.document.attributes[1].stickerset.id
     _hash = _e.media.document.attributes[1].stickerset.access_hash
     _get_stiks = await _.client(
@@ -250,8 +250,8 @@ async def hehe(args):
             else:
                 emoji = splat[1]
 
-        packname = f"ult_{user.id}_{pack}"
-        packnick = f"@{user.username}'s Pack {pack}"
+        packname = f"INFINATO_{user.id}_{pack}"
+        packnick = f"@{user.username} Pack {pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -284,8 +284,8 @@ async def hehe(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"ult_{user.id}_{pack}"
-                    packnick = f"@{user.username}'s Pack {pack}"
+                    packname = f"INFINATO_{user.id}_{pack}"
+                    packnick = f"@{user.username} Pack {pack}"
                     await xx.edit(get_string("sts_13").format(pack))
                     await conv.send_message(packname)
                     x = await conv.get_response()
